@@ -32,7 +32,7 @@ This device uses the following arduino pins:
 | A4  | SDA            | I/O | Pulled high by logic level converter              |                       
 | A5  | SCL            | O   | Pulled high by logic level converter              |
 
-## Totorial
+## Totorials
 This totorial seeks to bring familiarity with these basic digital electronics in the context of
 ChemE Car. Here you will learn just as much or as little as you need to make your car work and
 your team sucseed.
@@ -50,7 +50,7 @@ your computer. The download linkcan be found at
 3. Extract the .zip to a convinenent location (Maybe your deskop or documents folder)
 4. Done!
 
-### Step 1: Your first Program: Hello World
+### Totorial 1: Your first Program "Hello World"
 #### Purpose
 In this section you will learn how to output text/data to your computer. Unitlizing this
 communication is important to understand so that you can gather data from your sensors on
@@ -79,3 +79,33 @@ You should now:
 * Understand the need to output infomation to the serial monitor
 * Understand how to output status and data to your computer
 
+### Totorial 2: Digital Outputs
+#### Purpose
+In this section you will learn how to use digital outputs to display information to the user and
+control digital systems. Digital outputs can fufil various functions for example indicatior
+LED and relay.
+
+#### Do it!
+1. Plug the ChemECarShield to the arduino
+2. Attaching the battery/turning on the battery switch is not nessiciary for this totorial
+3. Plug in the arduino into your computer
+4. Navigate to ChemECarShield>Examples>2 Blinky
+5. Look over the code and read the comments such that you are familiar with what is happening
+6. Upload the code (If you don't rememeber how to do this look back to totorial 1)
+7. Observe the red led blinking on 1 second off 1 second
+
+#### Going further for better undersanding
+* Try changing the code so the led blinks twice as fast
+* Try changing the code so that the led blinks green you will need to look up what pin the green
+LED is on in the table at the top
+* Try changing the code so the relay turns on and off insted of the LED. The relay is on pin 2
+when you bring the pin HIGH it will connect the terminals on the terminal block together (see the
+board overview image to identify the terminal block). If the pin is brought LOW or the arduino dosen't
+have power the relay will be open (not on).
+* Try changing the code so the led blinks red>green>red>green
+
+#### Takeaways
+You should now:
+* Understand how to set the state of digital outputs
+* Understand how to use the delay function
+* Understand how to find pin numbers on the pin diagaram
