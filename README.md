@@ -23,10 +23,10 @@ This device uses the following arduino pins:
 | Pin | Connection     | I/O | Notes                                             |
 |-----|----------------|-----|---------------------------------------------------|
 | 2   | Relay          | O   | On when high                                      |
-| 3   | Red LED        | O   | On when high,PWM enabled                          |
+| 3   | Red LED        | O   | On when high, PWM enabled                         |
 | 4   | Switch         | I   | Connects to ground when closed SW pullup required |
-| 5   | Blue LED       | O   | On when high,PWM enabled                          |
-| 6   | Green LED      | O   | On when high,PWM enabled                          |
+| 5   | Blue LED       | O   | On when high, PWM enabled                         |
+| 6   | Green LED      | O   | On when high, PWM enabled                         |
 | A0  | Analog 1K Div  | I   | Pulled high by 1k ohm resistor                    |
 | A1  | Analog 10K Div | I   | Pulled high by 10k ohm resistor                   |
 | A4  | SDA            | I/O | Pulled high by logic level converter              |                       
