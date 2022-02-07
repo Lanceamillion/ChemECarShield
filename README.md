@@ -109,3 +109,8 @@ You should now:
 * Understand how to set the state of digital outputs
 * Understand how to use the delay function
 * Understand how to find pin numbers on the pin diagaram
+
+### Totorial 3: Digital Inputs
+### Totorial 4: Analog Inputs
+### Totorial 5: Program Structure
+### Totorial 6: Advanced Program Structure
