@@ -27,8 +27,8 @@ This device uses the following arduino pins:
 | 4   | Switch         | I   | Connects to ground when closed SW pull up required |
 | 5   | Blue LED       | O   | On when high, PWM enabled                          |
 | 6   | Green LED      | O   | On when high, PWM enabled                          |
-| A0  | Analog 1K Div  | I   | Pulled high by 1k ohm resistor                     |
-| A1  | Analog 10K Div | I   | Pulled high by 10k ohm resistor                    |
+| A0  | Analog 1K Div  | I   | Pulled low by 1k ohm resistor                      |
+| A1  | Analog 10K Div | I   | Pulled low by 10k ohm resistor                     |
 | A4  | SDA            | I/O | Pulled high by logic level converter               |                       
 | A5  | SCL            | O   | Pulled high by logic level converter               |
 
@@ -127,6 +127,8 @@ In this section you will learn how to use digital Inputs allowing you to read ba
 #### Going further for better understanding
 * The importance of pullup resistors in digital inputs
 * Change the code so the switch works in the opposite way
+* Change the code to use the relay
+
 #### Takeaways
 You should now:
 * Understand how to read and process digital inputs
