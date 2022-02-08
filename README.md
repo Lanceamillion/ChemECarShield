@@ -1,6 +1,6 @@
 # ChemE Car Shield
-Designed, Manufactured and Taught by Lance Nichols
-This repository serves a usage and quick startup guide for using the **ChemE Car Shield.** 
+Designed, manufactured and taught by Lance Nichols
+this repository serves a usage and quick startup guide for using the **ChemE Car Shield.** 
 This shield attaches to an Arduino and seeks simplify and consolidate the electronics of a 
 basic Chem-E Car.
 
@@ -158,3 +158,4 @@ You should now:
 ### Tutorial 5: Program Structure
 ### Tutorial 6: Advanced Program Structure
 ### Tutorial 7: Advanced Methods
+
