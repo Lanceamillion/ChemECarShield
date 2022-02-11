@@ -46,7 +46,7 @@ your computer. The download link can be found at
 1. To download this repository navigate to 
 [github.com/Lanceamillion/ChemECarShield](https://github.com/Lanceamillion/ChemECarShield) 
 (you may already be here)
-2. In the top left Code>Download ZIP
+2. In the top right Code>Download ZIP
 3. Extract the .zip to a convenient location (Maybe your desktop or documents folder)
 4. Done!
 
@@ -66,7 +66,7 @@ the basics of printing to the serial terminal.
 5. Look over the code and read the comments such that you are familiar with what is happening
 6. Once you understand the code navigate to tools>Port and select the port with the arduino
 7. Now click the arrow at the top left to upload the code to the arduino
-8. Check the progress in the console the bottom of the screen
+8. Check the progress in the console at the bottom of the screen
 9. In the top right open the serial monitor
 10. With the serial monitor open make sure you have the correct baud rate selected
 11. You should now see the "Hello ChemE" message in the serial monitor
@@ -98,9 +98,8 @@ LED and relay.
 * Try changing the code so the led blinks twice as fast
 * Try changing the code so that the led blinks green you will need to look up what pin the green
 LED is on in the table at the top
-* Try changing the code so the relay turns on and off instead of the LED. The relay is on pin 2
-when you bring the pin HIGH it will connect the terminals on the terminal block together (see the
-board overview image to identify the terminal block). If the pin is brought LOW or the arduino doesn't
+* Try changing the code so the relay turns on and off instead of the LED. The relay is on pin 2.
+When you bring the pin HIGH it will connect the terminals on the terminal block together (see the board overview image to identify the terminal block). If the pin is brought LOW or the arduino doesn't
 have power the relay will be open (not on).
 * Try changing the code so the led blinks red>green>red>green
 
@@ -122,15 +121,15 @@ In this section you will learn how to use digital Inputs allowing you to read ba
 5. Look over the code and read the comments such that you are familiar with what is happening
 6. Upload the code
 7. Open the serial monitor
-8. Flip the switch and observe the output
+8. Flip the switch on the shield and observe the output
 
 #### Going further for better understanding
-* The importance of pullup resistors in digital inputs
-* Change the code so the switch works in the opposite way
-* Change the code to use the relay
+* Change the code to use the relay instead of the LED
+* Change the code so the switch works in the opposite position
 
 #### Takeaways
 You should now:
+* The importance of pullup resistors in digital inputs
 * Understand how to read and process digital inputs
 
 ### Tutorial 4: Analog Inputs
@@ -146,6 +145,8 @@ In this section you will learn how to read and record analog inputs. Analog inpu
 6. Upload the code
 7. Open the serial monitor
 8. Use a piece of metal to bridge A0 to 5v and observe the change in value and the LED
+9. Close the serial monitor and navigate to tools>serial plotter
+10. Try placing the metal or a resistor between the terminals and observe the effect
 
 #### Going further for better understanding
 * Change the threshold of the LED trigger
