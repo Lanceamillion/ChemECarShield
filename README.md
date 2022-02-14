@@ -166,20 +166,20 @@ You should now:
 
 ### Tutorial 5: Program Structure
 #### Purpose
-The consept of program structure is an expansive topic however within the context of ChemE Car the level of complexity required is program structure is limited. Program structure will be the glue that will hold all of the baisc building blocks you have learned so far together. Basic program structure begins with the two baisc sections of an Arduino program setup() and loop().
+The concept of program structure is an expansive topic however within the context of ChemE Car the level of complexity required is program structure is limited. Program structure will be the glue that will hold all of the basic building blocks you have learned so far together. Basic program structure begins with the two basic sections of an Arduino program setup() and loop().
 
-**setup()** - This secton of code only runs once and begins when the Arduino boots. The Arduino boots after one of three evens: code is uploaded, power is turned to the device, or the reset button is pressed. While this section of code begins when the Arduino boots this does not nessicarrily mean that it must end just after the device boots. To further simlify the program structure and given the linear nature of ChemE Car programs we will be leverageing this fact.
+**setup()** - This section of code only runs once and begins when the Arduino boots. The Arduino boots after one of three events: code is uploaded, power is turned to the device, or the reset button is pressed. While this section of code begins when the Arduino boots this does not necessarily mean that it must end just after the device boots. To further simplify the program structure and given the linear nature of ChemE Car programs we will be leveraging this fact.
 
-**loop()** - This section of code runs over and over and is usefull for making a simple main loop in your program. We have been using this function to make things happen over and over in our previous programs. Once agian since the code that will run on the car doesn't need to be continuously looped we will largely be leving this section blank. One way to think about it is this is where the program will go once the car is done with its run.
+**loop()** - This section of code runs over and over and is useful for making a simple main loop in your program. We have been using this function to make things happen over and over in our previous programs. Once again since the code that will run on the car doesn't need to be continuously looped we will largely be leaving this section blank. One way to think about it is this is where the program will go once the car is done with its run.
 
-For a simple car generating electric power with its start reaction, the program structure can be discribed in the following steps.
+For a simple car generating electric power with its start reaction, the program structure can be described in the following steps.
 1. The vehicle turns on or is reset to the top of the code.
 2. The system **waits** for user or sensor input to know the run has started.
 3. The car **uses** the relay to connect the start reaction to the motor(s).
-4. The system **waits** for the sensor on the stop reaction to reach a certain threashold.
+4. The system **waits** for the sensor on the stop reaction to reach a certain threshold.
 5. The system **uses** the relay to disconnect the start reaction from the motor(s).
 6. The system is now done with its run and is shutdown and needs to be restarted to run again.
-These discrete steps can be easily maped to instructions in code.
+These discrete steps can be easily mapped to instructions in code.
 
 #### Do it!
 1. Plug the ChemECarShield to the arduino
@@ -190,7 +190,7 @@ These discrete steps can be easily maped to instructions in code.
 6. Upload the code
 7. Flip the switch and observe what happens. Notice that the switch may have already been flipped when the car was booted. This is an important observation and a solution will be covered in *Tutorial 6: Advanced Program Structure*
 8. Short the A0 contact as was done in *Tutorial 4*. Observe what happens.
-9. Try pressing the reset button and going back to steps 7-8. Try pressing the reset button at diffent stages in the program and seeing the result. Once again as discussed in step 7 the switch may already be flipped when the code boots so the code may instantly go past that section.
+9. Try pressing the reset button and going back to steps 7-8. Try pressing the reset button at different stages in the program and seeing the result. Once again as discussed in step 7 the switch may already be flipped when the code boots so the code may instantly go past that section.
 
 #### Going further for better understanding
 * Modify the code such that the LED blinks at different rates in different parts of the program 
@@ -199,8 +199,7 @@ These discrete steps can be easily maped to instructions in code.
 You should now:
 * Understand the process of turning non code instructions into code blocks.
 * Understand the building blocks of basic linear systems.
-* Undesrstand some of the problems with the most basic of linear program structures.
+* Understand some of the problems with the most basic of linear program structures.
 
 ### Tutorial 6: Advanced Program Structure
 ### Tutorial 7: Advanced Methods
-
