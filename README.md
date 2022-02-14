@@ -1,5 +1,5 @@
 # ChemE Car Shield
-Designed, manufactured and taught by Lance Nichols this repository serves as a usage and quick startup guide for using the **ChemE Car Shield.** This shield attaches to an Arduino and seeks simplify and consolidate the electronics of a basic Chem-E Car.
+Designed, manufactured and taught by Lance Nichols this repository serves as a usage and quick startup guide for using the **ChemE Car Shield.** This shield attaches to an Arduino and seeks to simplify and consolidate the electronics of a basic Chem-E Car.
 
 The features of the unit in order of simplicity include:
 * 9V battery holder
@@ -198,15 +198,15 @@ The new program structure can be described in the following steps.
 1. The vehicle turns on or is reset to the top of the code.
 2. The system **waits** for the switch to be turned off.
    * While waiting blink red to let the user know the switch is not ready
-2. The system **waits** for the switch to be turned on.
+3. The system **waits** for the switch to be turned on.
    * While waiting blink Orange to let the user know the switch is now ready
-3. The car **uses** the relay to connect the start reaction to the motor(s).
+4. The car **uses** the relay to connect the start reaction to the motor(s).
    * The relay turns on
-4. The system **waits** for the sensor on the stop reaction to reach a certain threshold **or** the switch is flipped.
+5. The system **waits** for the sensor on the stop reaction to reach a certain threshold **or** the switch is flipped.
    * While waiting blink green to show the car is operating
-5. The system **uses** the relay to disconnect the start reaction from the motor(s).
+6. The system **uses** the relay to disconnect the start reaction from the motor(s).
    * The relay turns off
-6. The system is now done with its run and is shutdown and needs to be restarted to run again.
+7. The system is now done with its run and is shutdown and needs to be restarted to run again.
    * Blink blue to show the car is done with its run
 These discrete steps can be easily mapped to instructions in code.
 
@@ -226,18 +226,30 @@ These discrete steps can be easily mapped to instructions in code.
 You should now:
 * Reinforce the understanding of the process of turning non code instructions into code blocks.
 * Reinforce the understanding of the building blocks of basic linear systems.
-* Understand how problems can be solved utilizing linear program structures
+* Understand how problems can be solved utilizing linear program structures.
 
 # Tutorial 7: Advanced Methods
 ### Purpose
 This tutorial covers advanced methods that can be utilized to increase reliability, usability and flashiness of your system. This tutorial will be unlike the previous tutorial as there won't be specific instructions. This tutorial will have a section of discussion on the topic then you can examine and run the example code associated with that feature. These methods are not required to implement a successful system. So for some teams this section may not be necessary however if you want to go one step further here are some good features and methods you can add.
 
-## 7.1: Startup Sequence
+## 7.1: Advanced Startup Sequence
+Begining your program with an advanced startup sequence can provide several benifits.
+1. A basic check to make sure the LED is working by blinking through the red green and blue chanels. When you boot the device look at the led to make sure it through blinked the colors if it failed to blink one of the colors you will know that color is out and you wont be able to see any status associated with that color.
+2. A check of the Relay briefly clicks the relay on and off. This provides two benefits, one by listening for the relay click you can identify that the relay is operational and will work in your run. Two, this brief closing of the relay will connect your start reaction to the motors. This connection will cause the motors to jump forward, this verifies that your start reaction is wired correctly (and there are no breaks in the wire) and the car will move in the correct direction.'
+3. A simple check of the stop reaction sensor to make sure when the vehicle starts it doesn't immediately stop. This check can usually be performed in some capacity but will depend on the application of your sensor.
+4. Ensure the switch is in the desired position at startup so the car does not begin moving when first booted. This failsafe was discussed and demonstrated in the previous tutorial.
+ 
+See ChemECarShield>Examples>7_1 Advanced Startup Sequence for a startup sequence that has all of these features.
 
 ## 7.2: LED Dimming Through PWM
+As demonstrated in earlier tutorials the red, green, and blue led channels can be turned on and off and even mixed to create more colors. These three channels can also be individually dimmed allowing you to create almost any color. The function used to do this is called analogWrite().
+ 
+See "ChemECarShield>Examples>7_2 dimming" for a demonstration of this feature.
 
 # Tutorial Conclusion
-  Congratulations on completing this tutorial you should be ready to create your own program!
+Congratulations on completing this tutorial you should be ready to create your own program! Feel free to mix and match these sections to fit your application.
+ 
+Word of advice: If your program ever breaks don't give up, be persistent , look at the error message and work back from there (often you may need to scroll up). Good programers make mistakes too they have just learned to be faster at figuring out the bugs.
 
 # Appendix A: Sensors and Wiring
 
