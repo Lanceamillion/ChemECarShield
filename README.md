@@ -190,9 +190,9 @@ This tutorial on advanced program structure seeks to solve two problems.
  1. As demonstrated in the previous tutorial problems can arise when the user starts the boot with the switch in the wrong place.
  2. The car doesn't have an emergency shutoff procedure.
  
- **Problem 1**
+ **Problem 1** By adding a simple startup check not unlike the check that holds the program until the switch is flipped to activate the car we can prevent this problem
 
- **Problem 2**
+ **Problem 2** To shut the car off in the event that the threashold is not reached or some other circumstance such as the car crashing, going out of bounds, ect. we will add an addtional check when the car checks the analog threashold to see if the switch has been flipped back to its starting position.
  
 The new program structure can be described in the following steps.
 1. The vehicle turns on or is reset to the top of the code.
@@ -244,13 +244,19 @@ See ChemECarShield>Examples>7_1 Advanced Startup Sequence for a startup sequence
 ## 7.2: LED Dimming Through PWM
 As demonstrated in earlier tutorials the red, green, and blue led channels can be turned on and off and even mixed to create more colors. These three channels can also be individually dimmed allowing you to create almost any color. The function used to do this is called analogWrite().
  
-See "ChemECarShield>Examples>7_2 dimming" for a demonstration of this feature.
+See "ChemECarShield>Examples>7_2 Dimming" for a demonstration of this feature.
 
 # Tutorial Conclusion
 Congratulations on completing this tutorial you should be ready to create your own program! Feel free to mix and match these sections to fit your application.
  
-Word of advice: If your program ever breaks don't give up, be persistent , look at the error message and work back from there (often you may need to scroll up). Good programers make mistakes too they have just learned to be faster at figuring out the bugs.
+Word of advice: If your program ever breaks don't give up, be persistent , look at the error message and work back from there (often you may need to scroll up). Good programers make mistakes too; they have just learned to be faster at figuring out the bugs.
 
 # Appendix A: Sensors and Wiring
+Selecting a suitable sensor is directly related to your selection of a stop reaction. Reading from the 2022 Chem-E-Car Official Rules we see that the car "*must be stopped by a quantifiable change ... of the concentration of a chemical species.*" From this we see that our sensor must be able to detect a change in concentration of a given solution. There are several common ways to do this.
+1. Photoresistors - Photoresistors are easily the easiest sensor to work with. Photoresistors change their resistance with different light levels. They require the solution to change in opacity such as an Iodine clock reaction.
+2. Pressure Sensors -
+3. Gas Sensors - Some sensors can be placed into a chamber or outlet and monitor qualities of the gas concentration. What these sensors measure varies; try an online search for "Arduino gas sensor." When making a selection keep in mind what type of signal output is being provided. If the output is analog then powering the device and connecting it to A2 or A3 would allow usage as has already been described earlier in this tutorial. If the output is digital be wary if it is a threshold device you will not be able to tune it to a specific value and will require much more work on the chemistry side as the threshold cannot be tuned in software. If the device uses I2C or Serial (using a library specific to the device) a connection can be made and the sensor values can be read and compared to your threshold in a similar way.
+There are likely some other good options out there do keep in mind the cost and performance of those other sensors when making your decision.
 
 # Appendix B: Sensor Calibration/Data Collection and Threshold Selection
+This section is WIP.
