@@ -50,7 +50,7 @@ In this section you will learn how to output text/data to your computer. Utilizi
 1. Plug the ChemECarShield to the arduino
 2. Attaching the battery/turning on the battery switch is not necessary for this tutorial
 3. Plug in the arduino into your computer
-4. Navigate to ChemECarShield>Examples>1 Hello World
+4. Navigate to ChemECarShield>Examples>1_Hello World
 5. Look over the code and read the comments such that you are familiar with what is happening
 6. Once you understand the code navigate to tools>Port and select the port with the arduino
 7. Now click the arrow at the top left to upload the code to the arduino
@@ -83,7 +83,7 @@ In this section you will learn how to use digital outputs to display information
 1. Plug the ChemECarShield to the arduino
 2. Attaching the battery/turning on the battery switch is not necessary for this tutorial
 3. Plug in the arduino into your computer
-4. Navigate to ChemECarShield>Examples>2 Blinky
+4. Navigate to ChemECarShield>Examples>2_Blinky
 5. Look over the code and read the comments such that you are familiar with what is happening
 6. Upload the code (If you don't remember how to do this look back to tutorial 1)
 7. Observe the red led blinking on 1 second off 1 second
@@ -108,7 +108,7 @@ In this section you will learn how to use digital Inputs allowing you to read ba
 1. Plug the ChemECarShield to the arduino
 2. Attaching the battery/turning on the battery switch is not necessary for this tutorial
 3. Plug in the arduino into your computer
-4. Navigate to ChemECarShield>Examples>3 Switch
+4. Navigate to ChemECarShield>Examples>3_Switch
 5. Look over the code and read the comments such that you are familiar with what is happening
 6. Upload the code
 7. Open the serial monitor
@@ -131,7 +131,7 @@ In this section you will learn how to read and record analog inputs. Analog inpu
 1. Plug the ChemECarShield to the arduino
 2. Attaching the battery/turning on the battery switch is not necessary for this tutorial
 3. Plug in the arduino into your computer
-4. Navigate to ChemECarShield>Examples>4 Analog
+4. Navigate to ChemECarShield>Examples>4_Analog
 5. Look over the code and read the comments such that you are familiar with what is happening
 6. Upload the code
 7. Open the serial monitor
@@ -168,7 +168,7 @@ These discrete steps can be easily mapped to instructions in code.
 1. Plug the ChemECarShield to the arduino
 2. Attaching the battery/turning on the battery switch is not necessary for this tutorial
 3. Plug in the arduino into your computer
-4. Navigate to ChemECarShield>Examples>5 Structure
+4. Navigate to ChemECarShield>Examples>5_Structure
 5. **Look over the code and read the comments so you can see how the steps above have been mapped into code**
 6. Upload the code
 7. Flip the switch and observe what happens. Notice that the switch may have already been flipped when the car was booted. This is an important observation and a solution will be covered in *Tutorial 6: Advanced Program Structure*
@@ -214,7 +214,7 @@ These discrete steps can be easily mapped to instructions in code.
 1. Plug the ChemECarShield to the arduino
 2. Attaching the battery/turning on the battery switch is not necessary for this tutorial
 3. Plug in the arduino into your computer
-4. Navigate to ChemECarShield>Examples>5 Structure
+4. Navigate to ChemECarShield>Examples>6_Advanced_Structure
 5. **Look over the code and read the comments so you can see how the steps above have been mapped into code**
 6. Upload the code
 7. Play with the system in your hands and observe what happens. Make sure to try these things and look at the program structure diagram or the code as you do it.
@@ -239,12 +239,12 @@ Begining your program with an advanced startup sequence can provide several beni
 3. A simple check of the stop reaction sensor to make sure when the vehicle starts it doesn't immediately stop. This check can usually be performed in some capacity but will depend on the application of your sensor.
 4. Ensure the switch is in the desired position at startup so the car does not begin moving when first booted. This failsafe was discussed and demonstrated in the previous tutorial.
  
-See ChemECarShield>Examples>7_1 Advanced Startup Sequence for a startup sequence that has all of these features.
+See ChemECarShield>Examples>7_1 Advanced_Startup_Sequence for a startup sequence that has all of these features.
 
 ## 7.2: LED Dimming Through PWM
 As demonstrated in earlier tutorials the red, green, and blue led channels can be turned on and off and even mixed to create more colors. These three channels can also be individually dimmed allowing you to create almost any color. The function used to do this is called analogWrite().
  
-See "ChemECarShield>Examples>7_2 Dimming" for a demonstration of this feature.
+See ChemECarShield>Examples>7_2_Dimming for a demonstration of this feature.
 
 # Tutorial Conclusion
 Congratulations on completing this tutorial you should be ready to create your own program! Feel free to mix and match these sections to fit your application.
@@ -252,11 +252,20 @@ Congratulations on completing this tutorial you should be ready to create your o
 Word of advice: If your program ever breaks don't give up, be persistent , look at the error message and work back from there (often you may need to scroll up). Good programers make mistakes too; they have just learned to be faster at figuring out the bugs.
 
 # Appendix A: Sensors and Wiring
-Selecting a suitable sensor is directly related to your selection of a stop reaction. Reading from the 2022 Chem-E-Car Official Rules we see that the car "*must be stopped by a quantifiable change ... of the concentration of a chemical species.*" From this we see that our sensor must be able to detect a change in concentration of a given solution. There are several common ways to do this.
+Selecting a suitable sensor should be directly related to your selection of a stop reaction. Reading from the 2022 Chem-E-Car Official Rules we see that the car "*must be stopped by a quantifiable change ... of the concentration of a chemical species.*" From this we see that our sensor must be able to detect a change in concentration of a given solution. There are several common ways to do this.
 1. Photoresistors - Photoresistors are easily the easiest sensor to work with. Photoresistors change their resistance with different light levels and can be connected directly from 5V to eaither A0 or A1 (since they have pulldowns attached). They require the solution to change in opacity such as an Iodine clock reaction or create its own light as in a luminol reaction. In both cases it is important to shield the reaction and sensor from outside light such that external lighting conditions can't affect the value read. In the case of the iodine clock a light source such as an LED would be required in the dark environment so the opacity may be measured. An LED may be directly connected from the 5V pin to the pin labeled LED on the ChemE Car shield. This light source would be placed on the other side of the container from the sensor so light can be blocked as the concentration changes.
 2. Pressure Sensors - While pressurized containers create lots of complexity with the design of their vessels a stop reaction utilizing a pressure sensor would be easy to interface with. This is not a guide on how to build such a stop reaction but some things to consider are how you will start the stop reaction if the vessel is enclosed. What kind of sensor you are using differential or absolute and if the sensor is analog or digital.
 3. Gas Sensors - Some sensors can be placed into a chamber or outlet and monitor qualities of the gas concentration. What these sensors measure varies; try an online search for "Arduino gas sensor." When making a selection keep in mind what type of signal output is being provided. If the output is analog then powering the device and connecting it to A2 or A3 would allow usage as has already been described earlier in this tutorial. If the output is digital be wary if it is a threshold device you will not be able to tune it to a specific value and will require much more work on the chemistry side as the threshold cannot be tuned in software. If the device uses I2C or Serial (using a library specific to the device) a connection can be made and the sensor values can be read and compared to your threshold in a similar way.
+
 There are likely some other good options out there do keep in mind the cost and performance of those other sensors when making your decision.
 
 # Appendix B: Sensor Calibration/Data Collection and Threshold Selection
-This section is WIP.
+With an appropriate sensor selected data collection is the next step. Ensure that your data collection setup is just as it would be on the car (you may just want to collect data while it is on the car). Run data collection on a wide range of concentrations since that is ultimately what you are going to need to change on competition day. To do the data collection you can use the simple script in "ChemECarShield>Examples>ApendixB_Data_Collection" or make your own. Upload the program and open the serial monitor. Just before you start your reaction clear the serial monitor. When the collection window is complete ctrl+a ctrl+c the data from the window and paste it into your prefered spreadsheet software. From here you can graph and analyze the value of your sensor. 
+
+If you use analogRead() you may get the question from your colleague "What is that number? Is it Photons? Pascals? Apms?" The real answer to this question is a little long but in short you can just think of the analogRead() value as a unitless value that represents how bright or how much pressure there is. The long answer is the arduino has a component inside of it called an analog digital converter (ADC). This converter takes the analog value on a given pin A0-A5 and measures the voltage. It takes that voltage and converts it to an unsigned (it isn't negative) 10 bit binary number. The minimum being 0 and the max value of such a number being 2^10-1 = 1023. The range of voltages possible being 0V to 5V. This number can then be mapped back to a voltage with the following formula 5V*(analogRead(pin)/1023). And since your sensor didn’t even measure volts to begin with this new number has just as little meaning as the last. Quite an unsatisfying answer huh?
+
+For the purpose of ChemE Car it is not necessary to calibrate this value that comes from your sensor to the value it is actually reading. Instead it is more useful to take this data you have recorded at a specific concentration of reactants and compare its behavior over time to other concentrations. Using the estimated speed of the vehicle, calculate the required time window for your stop reactions. From your initial test set select several concentrations that result in either “events” as with the iodine clock that cover this time or have good slope at these desired times as with the luminol reaction. These concentrations can be looked at in further detail with more testing including repeating the same concentration to ensure you have repeatability in your process.
+
+Selecting the threshold an iodine clock reaction should be very easy to pick just somewhere in the middle of the sudden transition. The luminol type reaction threshold will have to be drawn at some point in the tapering of the light transmission, pick a value that works well with your data set and stick with it. 
+ 
+Use these new datasets along with the speed of the vehicle to create a figure relating distance to concentration. This figure can now be used on competition day.
