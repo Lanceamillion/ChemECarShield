@@ -1,5 +1,5 @@
 # ChemE Car Shield
-Designed, manufactured and taught by Lance Nichols this repository serves as a usage and quick startup guide for using the **ChemE Car Shield.** This shield attaches to an Arduino Uno and seeks to simplify and consolidate the electronics of a basic Chem-E Car.
+Designed, manufactured, and taught by Lance Nichols this repository serves as a usage and quick startup guide for using the **ChemE Car Shield.** This shield attaches to an Arduino Uno and seeks to simplify and consolidate the electronics of a basic Chem-E Car.
 
 The features of the unit in order of simplicity include:
 * 9V battery holder
