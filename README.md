@@ -1,8 +1,5 @@
 # ChemE Car Shield
-Designed, manufactured and taught by Lance Nichols
-this repository serves a usage and quick startup guide for using the **ChemE Car Shield.** 
-This shield attaches to an Arduino and seeks simplify and consolidate the electronics of a 
-basic Chem-E Car.
+Designed, manufactured and taught by Lance Nichols this repository serves as a usage and quick startup guide for using the **ChemE Car Shield.** This shield attaches to an Arduino and seeks simplify and consolidate the electronics of a basic Chem-E Car.
 
 The features of the unit in order of simplicity include:
 * 9V battery holder
@@ -16,8 +13,7 @@ The features of the unit in order of simplicity include:
 * 10k Voltage Divider for analog inputs
 * I2C 3.3v Logic Level Shifter
 ## Specs
-If you already know what you are doing here are the pins that are used.
-If you don't understand what this means, continue with the tutorial.
+If you already know what you are doing here are the pins that are used. If you don't understand what this means, continue with the tutorial.
 
 This device uses the following arduino pins:
 | Pin | Connection     | I/O | Notes                                              |
@@ -33,14 +29,10 @@ This device uses the following arduino pins:
 | A5  | SCL            | O   | Pulled high by logic level converter               |
 
 # Tutorials
-These tutorials seek to bring familiarity with these basic digital electronics in the context of
-ChemE Car. Here you will learn just as much or as little as you need to make your car work and
-your team succeed.
+These tutorials seek to bring familiarity with these basic digital electronics in the context of ChemE Car. Here you will learn just as much or as little as you need to make your car work and your team succeed.
 
 ### Download the software
-To begin you will need to install the Arduino IDE (Integrated Development Environment) software on
-your computer. The download link can be found at 
-[arduino.cc/en/software](https://www.arduino.cc/en/software).
+To begin you will need to install the Arduino IDE (Integrated Development Environment) software on your computer. The download link can be found at [arduino.cc/en/software](https://www.arduino.cc/en/software).
 
 ### Downloading the repository
 1. To download this repository navigate to 
@@ -52,11 +44,7 @@ your computer. The download link can be found at
 
 # Tutorial 1: Your first Program "Hello World"
 ### Purpose
-In this section you will learn how to output text/data to your computer. Utilizing this
-communication is important to understand so that you can gather data from your sensors on
-the car and incorporate that data into your final program. We will talk more about this
-specifically how to gather data in future tutorials but for now we are going to address
-the basics of printing to the serial terminal.
+In this section you will learn how to output text/data to your computer. Utilizing this communication is important to understand so that you can gather data from your sensors on the car and incorporate that data into your final program. We will talk more about this specifically how to gather data in future tutorials but for now we are going to address the basics of printing to the serial terminal.
 
 ### Do it!
 1. Plug the ChemECarShield to the arduino
@@ -89,9 +77,7 @@ There are many more details about this language that I wont go into here but you
 
 # Tutorial 2: Digital Outputs
 ### Purpose
-In this section you will learn how to use digital outputs to display information to the user and
-control digital systems. Digital outputs can fulfill various functions for example indicator
-LED and relay.
+In this section you will learn how to use digital outputs to display information to the user and control digital systems. Digital outputs can fulfill various functions for example indicator LED and relay.
 
 ### Do it!
 1. Plug the ChemECarShield to the arduino
@@ -104,11 +90,8 @@ LED and relay.
 
 ### Going further for better understanding
 * Try changing the code so the led blinks twice as fast
-* Try changing the code so that the led blinks green you will need to look up what pin the green
-LED is on in the table at the top
-* Try changing the code so the relay turns on and off instead of the LED. The relay is on pin 2.
-When you bring the pin HIGH it will connect the terminals on the terminal block together (see the board overview image to identify the terminal block). If the pin is brought LOW or the arduino doesn't
-have power the relay will be open (not on).
+* Try changing the code so that the led blinks green you will need to look up what pin the green LED is on in the table at the top
+* Try changing the code so the relay turns on and off instead of the LED. The relay is on pin 2. When you bring the pin HIGH it will connect the terminals on the terminal block together (see the board overview image to identify the terminal block). If the pin is brought LOW or the arduino doesn't have power the relay will be open (not on).
 * Try changing the code so the led blinks red>green>red>green
 
 ### Takeaways
@@ -142,7 +125,7 @@ You should now:
 
 # Tutorial 4: Analog Inputs
 ### Purpose
-In this section you will learn how to read and record analog inputs. Analog inputs allow you to read much more than just a one or a zero; they allow you to detect the voltage applied to a particular pin. This can be very valuable for many analog sensors such as photoresistors and thermistors. In both cases the concept of a voltage divider is utilized. This divider essentially provides a reference resistance for the variable resistance of the photoresistor or thermistor to be compared against providing a variable voltage to be measured by an analog pin of the arduino. As you can see in the ChemE Car Shield pin table two pins (A0,A1) have already been attached to voltage dividing resistors. So that additional dividing resistors don't have to be utilized.
+In this section you will learn how to read and record analog inputs. Analog inputs allow you to read much more than just a one or a zero; they allow you to detect the voltage applied to a particular pin. This can be very valuable for many analog sensors such as photoresistors and thermistors. In both cases the concept of a voltage divider is utilized. This divider essentially provides a reference resistance for the variable resistance of the photoresistor or thermistor to be compared against providing a variable voltage to be measured by an analog pin of the arduino. As you can see in the ChemE Car Shield pin table two pins (A0,A1) have already been attached to voltage dividing resistors. So that additional dividing resistors don't have to be utilized. For additional information on sensor selection and wiring see **Appendix A: Sensors and Wiring.**
 
 ### Do it!
 1. Plug the ChemECarShield to the arduino
@@ -202,4 +185,60 @@ You should now:
 * Understand some of the problems with the most basic of linear program structures.
 
 # Tutorial 6: Advanced Program Structure
+### Purpose
+This tutorial on advanced program structure seeks to solve two problems. 
+ 1. As demonstrated in the previous tutorial problems can arise when the user starts the boot with the switch in the wrong place.
+ 2. The car doesn't have an emergency shutoff procedure.
+ 
+ **Problem 1**
+
+ **Problem 2**
+ 
+The new program structure can be described in the following steps.
+1. The vehicle turns on or is reset to the top of the code.
+2. The system **waits** for the switch to be turned off.
+   * While waiting blink red to let the user know the switch is not ready
+2. The system **waits** for the switch to be turned on.
+   * While waiting blink Orange to let the user know the switch is now ready
+3. The car **uses** the relay to connect the start reaction to the motor(s).
+   * The relay turns on
+4. The system **waits** for the sensor on the stop reaction to reach a certain threshold **or** the switch is flipped.
+   * While waiting blink green to show the car is operating
+5. The system **uses** the relay to disconnect the start reaction from the motor(s).
+   * The relay turns off
+6. The system is now done with its run and is shutdown and needs to be restarted to run again.
+   * Blink blue to show the car is done with its run
+These discrete steps can be easily mapped to instructions in code.
+
+### Do it!
+1. Plug the ChemECarShield to the arduino
+2. Attaching the battery/turning on the battery switch is not necessary for this tutorial
+3. Plug in the arduino into your computer
+4. Navigate to ChemECarShield>Examples>5 Structure
+5. **Look over the code and read the comments so you can see how the steps above have been mapped into code**
+6. Upload the code
+7. Play with the system in your hands and observe what happens. Make sure to try these things and look at the program structure diagram or the code as you do it.
+   * Flip the switch
+   * Reset the program
+   * Short A0
+
+### Takeaways
+You should now:
+* Reinforce the understanding of the process of turning non code instructions into code blocks.
+* Reinforce the understanding of the building blocks of basic linear systems.
+* Understand how problems can be solved utilizing linear program structures
+
 # Tutorial 7: Advanced Methods
+### Purpose
+This tutorial covers advanced methods that can be utilized to increase reliability, usability and flashiness of your system. This tutorial will be unlike the previous tutorial as there won't be specific instructions. This tutorial will have a section of discussion on the topic then you can examine and run the example code associated with that feature. These methods are not required to implement a successful system. So for some teams this section may not be necessary however if you want to go one step further here are some good features and methods you can add.
+
+## 7.2: Startup Sequence
+
+## 7.1: LED Dimming Through PWM
+
+# Tutorial Conclusion
+  Congratulations on completing this tutorial you should be ready to create your own program!
+
+# Appendix A: Sensors and Wiring
+
+# Appendix B: Sensor Calibration/Data Collection and Threshold Selection
