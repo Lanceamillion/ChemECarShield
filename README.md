@@ -144,7 +144,7 @@ You should now:
 ### Purpose
 In this section you will learn how to read and record analog inputs. Analog inputs allow you to read much more than just a one or a zero; they allow you to detect the voltage applied to a particular pin. This can be very valuable for many analog sensors such as photoresistors and thermistors. In both cases the concept of a voltage divider is utilized. This divider essentially provides a reference resistance for the variable resistance of the photoresistor or thermistor to be compared against providing a variable voltage to be measured by an analog pin of the arduino. As you can see in the ChemE Car Shield pin table two pins (A0,A1) have already been attached to voltage dividing resistors. So that additional dividing resistors don't have to be utilized.
 
-## Do it!
+### Do it!
 1. Plug the ChemECarShield to the arduino
 2. Attaching the battery/turning on the battery switch is not necessary for this tutorial
 3. Plug in the arduino into your computer
@@ -156,10 +156,10 @@ In this section you will learn how to read and record analog inputs. Analog inpu
 9. Close the serial monitor and navigate to tools>serial plotter
 10. Try placing the metal or a resistor between the terminals and observe the effect
 
-## Going further for better understanding
+### Going further for better understanding
 * Change the threshold of the LED trigger
 
-## Takeaways
+### Takeaways
 You should now:
 * The importance of voltage dividers in analog inputs
 * Understand how to read and process analog inputs
