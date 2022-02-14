@@ -125,7 +125,7 @@ You should now:
 
 # Tutorial 4: Analog Inputs
 ### Purpose
-In this section you will learn how to read and record analog inputs. Analog inputs allow you to read much more than just a one or a zero; they allow you to detect the voltage applied to a particular pin. This can be very valuable for many analog sensors such as photoresistors and thermistors. In both cases the concept of a voltage divider is utilized. This divider essentially provides a reference resistance for the variable resistance of the photoresistor or thermistor to be compared against providing a variable voltage to be measured by an analog pin of the arduino. As you can see in the ChemE Car Shield pin table two pins (A0,A1) have already been attached to voltage dividing resistors. So that additional dividing resistors don't have to be utilized. For additional information on sensor selection and wiring see **Appendix A: Sensors and Wiring.**
+In this section you will learn how to read and record analog inputs. Analog inputs allow you to read much more than just a one or a zero; they allow you to detect the voltage applied to a particular pin. This can be very valuable for many analog sensors such as photoresistors and thermistors. In both cases the concept of a voltage divider is utilized. This divider essentially provides a reference resistance for the variable resistance of the photoresistor or thermistor to be compared against providing a variable voltage to be measured by an analog pin of the arduino. As you can see in the ChemE Car Shield pin table two pins (A0,A1) have already been attached to voltage dividing resistors. So that additional dividing resistors don't have to be utilized.
 
 ### Do it!
 1. Plug the ChemECarShield to the arduino
@@ -146,6 +146,8 @@ In this section you will learn how to read and record analog inputs. Analog inpu
 You should now:
 * The importance of voltage dividers in analog inputs
 * Understand how to read and process analog inputs
+ 
+For additional information on sensor selection and wiring see **Appendix A: Sensors and Wiring** and for a discussion of data collecton se **Appendix B: Sensor Calibration/Data Collection and Threshold Selection**.
 
 # Tutorial 5: Program Structure
 ### Purpose
