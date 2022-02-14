@@ -79,6 +79,14 @@ You should now:
 * Understand the need to output information to the serial monitor
 * Understand how to output status and data to your computer
 
+#### Notes on the C++ language
+As you begin to write your own code keep in mind these rules of the C++ language
+* All lines of code must end in a semicolon (;)
+* Comments begin with // while block comments begin with /* and end */
+* Variables along with their type must be defined before their usage
+* **if** statements, **while** loops, **fuctions()**, ect. are contained by {}
+There are many more details about this language that I wont go into here but you have a more expansive question check the [Arduino Referance](https://www.arduino.cc/reference/en/?_gl=1*1pqet4u*_ga*MjEzMjE5Mjk5My4xNjM1NTYxODc0*_ga_NEXN8H46L5*MTY0NDgyMTgwMS4xMS4xLjE2NDQ4MjE4MDIuMA..) or do an online search for "<your problem> arduino"
+
 ### Tutorial 2: Digital Outputs
 #### Purpose
 In this section you will learn how to use digital outputs to display information to the user and
@@ -157,6 +165,42 @@ You should now:
 * Understand how to read and process analog inputs
 
 ### Tutorial 5: Program Structure
+#### Purpose
+The consept of program structure is an expansive topic however within the context of ChemE Car the level of complexity required is program structure is limited. Program structure will be the glue that will hold all of the baisc building blocks you have learned so far together. Basic program structure begins with the two baisc sections of an Arduino program setup() and loop().
+
+**setup()** - This secton of code only runs once and begins when the Arduino boots. The Arduino boots after one of three evens: code is uploaded, power is turned to the device, or the reset button is pressed. While this section of code begins when the Arduino boots this does not nessicarrily mean that it must end just after the device boots. To further simlify the program structure and given the linear nature of ChemE Car programs we will be leverageing this fact.
+
+**loop()** - This section of code runs over and over and is usefull for making a simple main loop in your program. We have been using this function to make things happen over and over in our previous programs. Once agian since the code that will run on the car doesn't need to be continuously looped we will largely be leving this section blank. One way to think about it is this is where the program will go once the car is done with its run.
+
+For a simple car generating electric power with its start reaction, the program structure can be discribed in the following steps.
+1. The vehicle turns on or is reset to the top of the code.
+2. The system **waits** for user or sensor input to know the run has started.
+3. The car **uses** the relay to connect the start reaction to the motor(s).
+4. The system **waits** for the sensor on the stop reaction to reach a certain threashold.
+5. The system **uses** the relay to disconnect the start reaction from the motor(s).
+6. The system is now done with its run and is shutdown and needs to be restarted to run again.
+These discrete steps can be easily maped to instructions in code.
+
+#### Do it!
+1. Plug the ChemECarShield to the arduino
+2. Attaching the battery/turning on the battery switch is not necessary for this tutorial
+3. Plug in the arduino into your computer
+4. Navigate to ChemECarShield>Examples>5 Structure
+5. **Look over the code and read the comments so you can see how the steps above have been mapped into code**
+6. Upload the code
+7. Flip the switch and observe what happens. Notice that the switch may have already been flipped when the car was booted. This is an important observation and a solution will be covered in *Tutorial 6: Advanced Program Structure*
+8. Short the A0 contact as was done in *Tutorial 4*. Observe what happens.
+9. Try pressing the reset button and going back to steps 7-8. Try pressing the reset button at diffent stages in the program and seeing the result. Once again as discussed in step 7 the switch may already be flipped when the code boots so the code may instantly go past that section.
+
+#### Going further for better understanding
+* Modify the code such that the LED blinks at different rates in different parts of the program 
+
+#### Takeaways
+You should now:
+* Understand the process of turning non code instructions into code blocks.
+* Understand the building blocks of basic linear systems.
+* Undesrstand some of the problems with the most basic of linear program structures.
+
 ### Tutorial 6: Advanced Program Structure
 ### Tutorial 7: Advanced Methods
 
