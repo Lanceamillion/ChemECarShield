@@ -232,9 +232,9 @@ You should now:
 ### Purpose
 This tutorial covers advanced methods that can be utilized to increase reliability, usability and flashiness of your system. This tutorial will be unlike the previous tutorial as there won't be specific instructions. This tutorial will have a section of discussion on the topic then you can examine and run the example code associated with that feature. These methods are not required to implement a successful system. So for some teams this section may not be necessary however if you want to go one step further here are some good features and methods you can add.
 
-## 7.2: Startup Sequence
+## 7.1: Startup Sequence
 
-## 7.1: LED Dimming Through PWM
+## 7.2: LED Dimming Through PWM
 
 # Tutorial Conclusion
   Congratulations on completing this tutorial you should be ready to create your own program!
