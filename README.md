@@ -37,12 +37,12 @@ These tutorials seek to bring familiarity with these basic digital electronics i
 ChemE Car. Here you will learn just as much or as little as you need to make your car work and
 your team succeed.
 
-## Download the software
+### Download the software
 To begin you will need to install the Arduino IDE (Integrated Development Environment) software on
 your computer. The download link can be found at 
 [arduino.cc/en/software](https://www.arduino.cc/en/software).
 
-## Downloading the repository
+### Downloading the repository
 1. To download this repository navigate to 
 [github.com/Lanceamillion/ChemECarShield](https://github.com/Lanceamillion/ChemECarShield) 
 (you may already be here)
@@ -51,14 +51,14 @@ your computer. The download link can be found at
 4. Done!
 
 # Tutorial 1: Your first Program "Hello World"
-## Purpose
+### Purpose
 In this section you will learn how to output text/data to your computer. Utilizing this
 communication is important to understand so that you can gather data from your sensors on
 the car and incorporate that data into your final program. We will talk more about this
 specifically how to gather data in future tutorials but for now we are going to address
 the basics of printing to the serial terminal.
 
-## Do it!
+### Do it!
 1. Plug the ChemECarShield to the arduino
 2. Attaching the battery/turning on the battery switch is not necessary for this tutorial
 3. Plug in the arduino into your computer
@@ -71,10 +71,10 @@ the basics of printing to the serial terminal.
 10. With the serial monitor open make sure you have the correct baud rate selected
 11. You should now see the "Hello ChemE" message in the serial monitor
 
-## Going further for better understanding
+### Going further for better understanding
 Try changing the message in the code and uploading it.
 
-## Takeaways
+### Takeaways
 You should now:
 * Understand the need to output information to the serial monitor
 * Understand how to output status and data to your computer
@@ -88,12 +88,12 @@ As you begin to write your own code keep in mind these rules of the C++ language
 There are many more details about this language that I wont go into here but you have a more expansive question check the [Arduino Referance](https://www.arduino.cc/reference/en/?_gl=1*1pqet4u*_ga*MjEzMjE5Mjk5My4xNjM1NTYxODc0*_ga_NEXN8H46L5*MTY0NDgyMTgwMS4xMS4xLjE2NDQ4MjE4MDIuMA..) or do an online search for "<your problem> arduino"
 
 # Tutorial 2: Digital Outputs
-## Purpose
+### Purpose
 In this section you will learn how to use digital outputs to display information to the user and
 control digital systems. Digital outputs can fulfill various functions for example indicator
 LED and relay.
 
-## Do it!
+### Do it!
 1. Plug the ChemECarShield to the arduino
 2. Attaching the battery/turning on the battery switch is not necessary for this tutorial
 3. Plug in the arduino into your computer
@@ -102,7 +102,7 @@ LED and relay.
 6. Upload the code (If you don't remember how to do this look back to tutorial 1)
 7. Observe the red led blinking on 1 second off 1 second
 
-## Going further for better understanding
+### Going further for better understanding
 * Try changing the code so the led blinks twice as fast
 * Try changing the code so that the led blinks green you will need to look up what pin the green
 LED is on in the table at the top
@@ -111,17 +111,17 @@ When you bring the pin HIGH it will connect the terminals on the terminal block 
 have power the relay will be open (not on).
 * Try changing the code so the led blinks red>green>red>green
 
-## Takeaways
+### Takeaways
 You should now:
 * Understand how to set the state of digital outputs
 * Understand how to use the delay function
 * Understand how to find pin numbers on the pin diagram
 
 # Tutorial 3: Digital Inputs
-## Purpose
+### Purpose
 In this section you will learn how to use digital Inputs allowing you to read basic user inputs and feedback. The concept of a pullup resistor is utilized; this resistor ensures that the input pin of the arduino is connected to a reference voltage at all times and when the switch is in both positions. When the switch is “closed” it is then connected to ground which drives the voltage of the pin to the low state. The Arduino uno has so called internal pullup resistors meaning there isn't a physical resistor on the board but rather one is activated inside the arduino’s microcontroller. These specifics aren’t important to understand but keep in mind that pullup resistors are necessary for many digital inputs such as switches and buttons.
 
-## Do it!
+### Do it!
 1. Plug the ChemECarShield to the arduino
 2. Attaching the battery/turning on the battery switch is not necessary for this tutorial
 3. Plug in the arduino into your computer
@@ -131,17 +131,17 @@ In this section you will learn how to use digital Inputs allowing you to read ba
 7. Open the serial monitor
 8. Flip the switch on the shield and observe the output
 
-## Going further for better understanding
+### Going further for better understanding
 * Change the code to use the relay instead of the LED
 * Change the code so the switch works in the opposite position
 
-#### Takeaways
+### Takeaways
 You should now:
 * The importance of pullup resistors in digital inputs
 * Understand how to read and process digital inputs
 
 # Tutorial 4: Analog Inputs
-## Purpose
+### Purpose
 In this section you will learn how to read and record analog inputs. Analog inputs allow you to read much more than just a one or a zero; they allow you to detect the voltage applied to a particular pin. This can be very valuable for many analog sensors such as photoresistors and thermistors. In both cases the concept of a voltage divider is utilized. This divider essentially provides a reference resistance for the variable resistance of the photoresistor or thermistor to be compared against providing a variable voltage to be measured by an analog pin of the arduino. As you can see in the ChemE Car Shield pin table two pins (A0,A1) have already been attached to voltage dividing resistors. So that additional dividing resistors don't have to be utilized.
 
 ## Do it!
@@ -165,7 +165,7 @@ You should now:
 * Understand how to read and process analog inputs
 
 # Tutorial 5: Program Structure
-## Purpose
+### Purpose
 The concept of program structure is an expansive topic however within the context of ChemE Car the level of complexity required is program structure is limited. Program structure will be the glue that will hold all of the basic building blocks you have learned so far together. Basic program structure begins with the two basic sections of an Arduino program setup() and loop().
 
 **setup()** - This section of code only runs once and begins when the Arduino boots. The Arduino boots after one of three events: code is uploaded, power is turned to the device, or the reset button is pressed. While this section of code begins when the Arduino boots this does not necessarily mean that it must end just after the device boots. To further simplify the program structure and given the linear nature of ChemE Car programs we will be leveraging this fact.
@@ -181,7 +181,7 @@ For a simple car generating electric power with its start reaction, the program 
 6. The system is now done with its run and is shutdown and needs to be restarted to run again.
 These discrete steps can be easily mapped to instructions in code.
 
-## Do it!
+### Do it!
 1. Plug the ChemECarShield to the arduino
 2. Attaching the battery/turning on the battery switch is not necessary for this tutorial
 3. Plug in the arduino into your computer
@@ -192,10 +192,10 @@ These discrete steps can be easily mapped to instructions in code.
 8. Short the A0 contact as was done in *Tutorial 4*. Observe what happens.
 9. Try pressing the reset button and going back to steps 7-8. Try pressing the reset button at different stages in the program and seeing the result. Once again as discussed in step 7 the switch may already be flipped when the code boots so the code may instantly go past that section.
 
-## Going further for better understanding
+### Going further for better understanding
 * Modify the code such that the LED blinks at different rates in different parts of the program 
 
-## Takeaways
+### Takeaways
 You should now:
 * Understand the process of turning non code instructions into code blocks.
 * Understand the building blocks of basic linear systems.
