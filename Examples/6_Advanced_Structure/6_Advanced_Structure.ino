@@ -41,7 +41,7 @@ void setup() {
   // Step 4: Turn on the relay
   digitalWrite(Relay, HIGH);
 
-  // Step 5: Wait for the sensor to reach the threashold
+  // Step 5: Wait for the sensor to reach the threashold or the switch is flipped back
   while(analogRead(AnalogIn) < 500 && digitalRead(Switch)){
     //Blink the LED green
     digitalWrite(GreenLED, HIGH);
@@ -50,7 +50,7 @@ void setup() {
     delay(500);
   }
   
-  // Step 6: Turn off hte relay
+  // Step 6: Turn off the relay
   digitalWrite(Relay, LOW);
 }
 

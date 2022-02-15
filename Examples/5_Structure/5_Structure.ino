@@ -41,7 +41,7 @@ void setup() {
     delay(500);
   }
   
-  // Step 5: Turn off hte relay
+  // Step 5: Turn off the relay
   digitalWrite(Relay, LOW);
 }
 
