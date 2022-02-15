@@ -247,7 +247,7 @@ Beginning your program with an advanced startup sequence can provide several ben
 3. A simple check of the stop reaction sensor to make sure when the vehicle starts it doesn't immediately stop. This check can usually be performed in some capacity but will depend on the application of your sensor.
 4. Ensure the switch is in the desired position at startup so the car does not begin moving when first booted. This failsafe was discussed and demonstrated in the previous tutorial.
  
-See ChemECarShield>Examples>7_1 Advanced_Startup_Sequence for a startup sequence that has all of these features.
+See ChemECarShield>Examples>7_1_Advanced_Startup_Sequence for a startup sequence that has all of these features.
 
 ## 7.2: LED Dimming Through PWM
 As demonstrated in earlier tutorials the red, green, and blue led channels can be turned on and off and even mixed to create more colors. These three channels can also be individually dimmed allowing you to create almost any color. The function used to do this is called analogWrite().
