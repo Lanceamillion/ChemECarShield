@@ -151,7 +151,7 @@ For additional information on sensor selection and wiring see **Appendix A: Sens
 
 # Tutorial 5: Program Structure
 ### Purpose
-The concept of program structure is an expansive topic however within the context of ChemE Car the level of complexity required is program structure is limited. Program structure will be the glue that will hold all of the basic building blocks you have learned so far together. Basic program structure begins with the two basic sections of an Arduino program setup() and loop().
+The concept of program structure is an expansive topic, however within the context of ChemE Car the level of complexity required is program structure is limited. Program structure will be the glue that will hold all of the basic building blocks you have learned so far together. Basic program structure begins with the two basic sections of an Arduino program setup() and loop().
 
 **setup()** - This section of code only runs once and begins when the Arduino boots. The Arduino boots after one of three events: code is uploaded, power is turned to the device, or the reset button is pressed. While this section of code begins when the Arduino boots this does not necessarily mean that it must end just after the device boots. To further simplify the program structure and given the linear nature of ChemE Car programs we will be leveraging this fact.
 
@@ -160,16 +160,17 @@ The concept of program structure is an expansive topic however within the contex
 For a simple car generating electric power with its start reaction, the program structure can be described in the following steps.
 1. The vehicle turns on or is reset to the top of the code.
 2. The system **waits** for user or sensor input to know the run has started.
-   * While waiting blink yellow to let the user know the system is not ready
+   * While waiting blink the LED yellow to let the user know the system is not ready
 3. The car **uses** the relay to connect the start reaction to the motor(s).
    * The relay turns on
 4. The system **waits** for the sensor on the stop reaction to reach a certain threshold.
-   * While waiting blink green to show the car is operating
+   * While waiting blink the LED green to show the car is operating
 5. The system **uses** the relay to disconnect the start reaction from the motor(s).
    * The relay turns off
 6. The system is now done with its run and is shutdown and needs to be restarted to run again.
    * Blink blue to show the car is done with its run
-These discrete steps can be easily mapped to instructions in code.
+
+ These discrete steps can be easily mapped to instructions in code.
 
 ### Do it!
 1. Plug the ChemECarShield to the arduino
