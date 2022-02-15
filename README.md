@@ -72,7 +72,7 @@ As you begin to write your own code keep in mind these rules of the C++ language
 * All lines of code must end in a semicolon (;)
 * Comments begin with // while block comments begin with /* and end */
 * Variables along with their type must be defined before their usage
-* **if** statements, **while** loops, **fuctions()**, ect. are contained by {}
+* **if** statements, **while** loops, **functions()**, ect. are contained by {}
 There are many more details about this language that I wont go into here but you have a more expansive question check the [Arduino Referance](https://www.arduino.cc/reference/en/?_gl=1*1pqet4u*_ga*MjEzMjE5Mjk5My4xNjM1NTYxODc0*_ga_NEXN8H46L5*MTY0NDgyMTgwMS4xMS4xLjE2NDQ4MjE4MDIuMA..) or do an online search for "<your problem> arduino"
 
 # Tutorial 2: Digital Outputs
@@ -198,9 +198,9 @@ This tutorial on advanced program structure seeks to solve two problems.
  1. As demonstrated in the previous tutorial problems can arise when the user starts the boot with the switch in the wrong place.
  2. The car doesn't have an emergency shutoff procedure.
  
- **Problem 1** By adding a simple startup check not unlike the check that holds the program until the switch is flipped to activate the car we can prevent this problem
+ **Problem 1** By adding a simple startup check, not unlike the check that holds the program until the switch is flipped to activate the car, we can prevent this problem
 
- **Problem 2** To shut the car off in the event that the threashold is not reached or some other circumstance such as the car crashing, going out of bounds, ect. we will add an addtional check when the car checks the analog threashold to see if the switch has been flipped back to its starting position.
+ **Problem 2** To shut the car off in the event that the threshold is not reached or some other circumstance such as the car crashing, going out of bounds, ect. we will add an additional check when the car checks the analog threshold to see if the switch has been flipped back to its starting position.
  
 The new program structure can be described in the following steps.
 1. The vehicle turns on or is reset to the top of the code.
@@ -241,8 +241,8 @@ You should now:
 This tutorial covers advanced methods that can be utilized to increase reliability, usability and flashiness of your system. This tutorial will be unlike the previous tutorial as there won't be specific instructions. This tutorial will have a section of discussion on the topic then you can examine and run the example code associated with that feature. These methods are not required to implement a successful system. So for some teams this section may not be necessary however if you want to go one step further here are some good features and methods you can add.
 
 ## 7.1: Advanced Startup Sequence
-Begining your program with an advanced startup sequence can provide several benifits.
-1. A basic check to make sure the LED is working by blinking through the red green and blue chanels. When you boot the device look at the led to make sure it through blinked the colors if it failed to blink one of the colors you will know that color is out and you wont be able to see any status associated with that color.
+Beginning your program with an advanced startup sequence can provide several benefits.
+1. A basic check to make sure the LED is working by blinking through the red green and blue channels. When you boot the device look at the led to make sure it blinks the colors. If it failed to blink one of the colors you will know that color is out and you won't be able to see any status associated with that color.
 2. A check of the Relay briefly clicks the relay on and off. This provides two benefits, one by listening for the relay click you can identify that the relay is operational and will work in your run. Two, this brief closing of the relay will connect your start reaction to the motors. This connection will cause the motors to jump forward, this verifies that your start reaction is wired correctly (and there are no breaks in the wire) and the car will move in the correct direction.'
 3. A simple check of the stop reaction sensor to make sure when the vehicle starts it doesn't immediately stop. This check can usually be performed in some capacity but will depend on the application of your sensor.
 4. Ensure the switch is in the desired position at startup so the car does not begin moving when first booted. This failsafe was discussed and demonstrated in the previous tutorial.
