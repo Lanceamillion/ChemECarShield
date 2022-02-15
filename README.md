@@ -160,7 +160,7 @@ The concept of program structure is an expansive topic however within the contex
 For a simple car generating electric power with its start reaction, the program structure can be described in the following steps.
 1. The vehicle turns on or is reset to the top of the code.
 2. The system **waits** for user or sensor input to know the run has started.
-   * While waiting blink orange to let the user know the system is not ready
+   * While waiting blink yellow to let the user know the system is not ready
 3. The car **uses** the relay to connect the start reaction to the motor(s).
    * The relay turns on
 4. The system **waits** for the sensor on the stop reaction to reach a certain threshold.
@@ -206,7 +206,7 @@ The new program structure can be described in the following steps.
 2. The system **waits** for the switch to be turned off.
    * While waiting blink red to let the user know the switch is not ready
 3. The system **waits** for the switch to be turned on.
-   * While waiting blink Orange to let the user know the switch is now ready
+   * While waiting blink yellow to let the user know the switch is now ready
 4. The car **uses** the relay to connect the start reaction to the motor(s).
    * The relay turns on
 5. The system **waits** for the sensor on the stop reaction to reach a certain threshold **or** the switch is flipped.
