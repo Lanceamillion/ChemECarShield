@@ -50,7 +50,7 @@ In this section you will learn how to output text/data to your computer. Utilizi
 1. Plug the ChemECarShield to the arduino
 2. Attaching the battery/turning on the battery switch is not necessary for this tutorial
 3. Plug in the arduino into your computer
-4. Navigate to ChemECarShield>Examples>1_Hello World
+4. Navigate to ChemECarShield>Examples>1_Hello_World
 5. Look over the code and read the comments such that you are familiar with what is happening
 6. Once you understand the code navigate to tools>Port and select the port with the arduino
 7. Now click the arrow at the top left to upload the code to the arduino
